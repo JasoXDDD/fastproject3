@@ -16,7 +16,6 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -24,19 +23,19 @@
     "\n",
     "**Fill in the blanks please:**\n",
     "\n",
-    "Procedure: A named algorithm that has parameters and return values\n",
+    "Procedure: \n",
     "\n",
-    "Parameters: inputs of a procedure\n",
+    "Parameters:\n",
     "\n",
-    "Arguments: specifying values of parameter when procedure is called\n",
+    "Arguments:\n",
     "\n",
-    "Modularity: Seperating parts of functions into other functions for easier usage\n",
+    "Modularity: \n",
     "\n",
-    "Procedural Abstraction: The ability to call a process without stating what it does, but the name of the procedure\n",
+    "Procedural Abstraction: \n",
     "\n",
-    "What are some other names for procedures?: method, function\n",
+    "What are some other names for procedures?: \n",
     "\n",
-    "Why are procedures effective?: They can do certain things without stating the same thing many times in different places\n"
+    "Why are procedures effective?: \n"
    ]
   },
   {
@@ -49,14 +48,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "111\n"
+      "\n"
      ]
     }
    ],
@@ -64,17 +63,10 @@
     "decimal = 7\n",
     "\n",
     "def convertToBinary(n):\n",
-    "    ans = \"\"\n",
-    "    if n == 0:\n",
-    "        return 0\n",
-    "    while n:\n",
-    "        ans += str(n&1)\n",
-    "        n = n >> 1\n",
-    "     \n",
-    "    ans = ans[::-1]\n",
-    " \n",
-    "    return ans\n",
-    "print(convertToBinary(decimal))"
+    "\n",
+    "\n",
+    "    (decimal) \n",
+    "print()"
    ]
   },
   {
@@ -87,34 +79,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "6\n",
-      "1\n"
-     ]
+   "execution_count": null,
+   "metadata": {
+    "vscode": {
+     "languageId": "javascript"
     }
-   ],
-   "source": [
-    "def findMax(*args):\n",
-    "    ans=args[0]\n",
-    "    for arg in args:\n",
-    "        if ans<arg:\n",
-    "            ans=arg\n",
-    "    return ans\n",
-    "def findMin(*args):\n",
-    "    ans=args[0]\n",
-    "    for arg in args:\n",
-    "        if ans>arg:\n",
-    "            ans=arg\n",
-    "    return ans\n",
-    "print(findMax(1,3,4,5,2,6))\n",
-    "print(findMin(1,3,4,5,2,6))"
-   ]
+   },
+   "outputs": [],
+   "source": []
   },
   {
    "attachments": {},
@@ -126,38 +98,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "APCSP in binary is\n",
-      "['1000001', '1010000', '1000011', '1010011', '1010000']\n"
+      "''APCSP'' in binary is \n",
+      "[1000001, 1010000, 1000011, 1010011, 1010000]\n"
      ]
     }
    ],
    "source": [
-    "def charToBinary(x):\n",
-    "    ans=[]\n",
-    "    for chr in x:\n",
-    "        dec=ord(chr)\n",
-    "        ans.append(convertToBinary(dec))\n",
-    "    return ans\n",
+    "def charToBinary(x):()\n",
     "\n",
-    "string=\"APCSP\"\n",
-    "print(string+\" in binary is\")\n",
-    "print(charToBinary(string))\n",
-    "# The output shown below is the output you are supposed to get\n",
-    "# ''APCSP'' in binary is \n",
-    "# [1000001, 1010000, 1000011, 1010011, 1010000]"
+    "# The output shown below is the output you are supposed to get"
    ]
   }
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python 3.8.2 64-bit",
    "language": "python",
    "name": "python3"
   },
@@ -171,12 +133,12 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.8.10"
+   "version": "3.8.2"
   },
   "orig_nbformat": 4,
   "vscode": {
    "interpreter": {
-    "hash": "31f2aee4e71d21fbe5cf8b01ff0e069b9275f58929596ceb00d14d90e3e16cd6"
+    "hash": "916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1"
    }
   }
  },

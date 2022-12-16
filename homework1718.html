@@ -241,7 +241,10 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
 <li>Undecidable problems are results of paradoxes<ul>
-<li>Undecidable problems halts progress.</li>
+<li>Undecidable problems halts progress in servers and more.<ul>
+<li>Causes internet buffering due to internet getting caught up in something</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -264,31 +267,31 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;DelNorte&#39;</span><span class="p">:{</span>
+    <span class="s1">&#39;Del Norte&#39;</span><span class="p">:{</span>
         <span class="s1">&#39;Westview&#39;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
         <span class="s1">&#39;MtCarmel&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;Poway&#39;</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">&#39;RanchoBernrdo&#39;</span><span class="p">:</span><span class="mi">50</span>
+        <span class="s1">&#39;RanchoBernado&#39;</span><span class="p">:</span><span class="mi">50</span>
     <span class="p">},</span>
     <span class="s1">&#39;Westview&#39;</span><span class="p">:{</span>
         <span class="s1">&#39;Del Norte&#39;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
         <span class="s1">&#39;MtCarmel&#39;</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
         <span class="s1">&#39;Poway&#39;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
-        <span class="s1">&#39;RanchoBernrdo&#39;</span><span class="p">:</span> <span class="mi">45</span>
+        <span class="s1">&#39;RanchoBernado&#39;</span><span class="p">:</span> <span class="mi">45</span>
     <span class="p">},</span>
     <span class="s1">&#39;MtCarmel&#39;</span><span class="p">:{</span>
         <span class="s1">&#39;Westview&#39;</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
         <span class="s1">&#39;Del Norte&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;Poway&#39;</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
-        <span class="s1">&#39;RanchoBernrdo&#39;</span><span class="p">:</span><span class="mi">30</span>
+        <span class="s1">&#39;RanchoBernado&#39;</span><span class="p">:</span><span class="mi">30</span>
     <span class="p">},</span>
     <span class="s1">&#39;Poway&#39;</span><span class="p">:{</span>
         <span class="s1">&#39;Westview&#39;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
         <span class="s1">&#39;MtCarmel&#39;</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span>
         <span class="s1">&#39;Del Norte&#39;</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span>
-        <span class="s1">&#39;RanchoBernrdo&#39;</span><span class="p">:</span><span class="mi">15</span>
+        <span class="s1">&#39;RanchoBernado&#39;</span><span class="p">:</span><span class="mi">15</span>
     <span class="p">},</span>
-    <span class="s1">&#39;RanchoBernardo&#39;</span><span class="p">:{</span>
+    <span class="s1">&#39;RanchoBernado&#39;</span><span class="p">:{</span>
         <span class="s1">&#39;Westview&#39;</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span>
         <span class="s1">&#39;MtCarmel&#39;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
         <span class="s1">&#39;Poway&#39;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span>
@@ -311,17 +314,62 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fastestroute</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">drivetime</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">order</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#CODE,CODE,CODE</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">drivetime</span><span class="p">,</span><span class="n">order</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="k">def</span> <span class="nf">fastestroutefast</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">last</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">order</span><span class="p">):</span> <span class="c1"># The algorithm returns a fast route quickly</span>
+    <span class="k">global</span> <span class="n">dataset</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span><span class="o">&gt;=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">time</span><span class="o">+</span><span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">],</span> <span class="n">order</span><span class="o">+</span><span class="p">[</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">]</span>
+    <span class="n">nextStop</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">2147483647</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span> <span class="c1"># go to the closest school</span>
+        <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span><span class="o">!=</span><span class="n">last</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">nextStop</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">nextStop</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">i</span>
+                <span class="n">nextStop</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">fastestroutefast</span><span class="p">(</span><span class="n">nextStop</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">start</span><span class="p">,</span><span class="n">time</span><span class="o">+</span><span class="n">nextStop</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">order</span><span class="o">+</span><span class="p">[</span><span class="n">nextStop</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
 
-<span class="n">start</span> <span class="o">=</span> <span class="s1">&#39;DelNorte&#39;</span>
-<span class="c1"># &#39;dataset&#39; is the name of the nested key value pair</span>
+<span class="k">def</span> <span class="nf">fastestroutebest</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">last</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">order</span><span class="p">):</span> <span class="c1"># The algorithm that returns the fastest route</span>
+    <span class="k">global</span> <span class="n">dataset</span>
+    <span class="n">ansTime</span><span class="o">=</span><span class="mi">2147483647</span>
+    <span class="n">ansOrder</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">tempTime</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">tempOrder</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span><span class="o">&gt;=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span> <span class="ow">and</span> <span class="n">start</span><span class="o">!=</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">time</span><span class="p">,</span> <span class="n">order</span><span class="o">+</span><span class="p">[</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">]</span> <span class="c1"># return the time it took to get this school and order</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span> <span class="c1"># go to the every school</span>
+        <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span><span class="o">!=</span><span class="n">last</span><span class="p">:</span>
+            <span class="n">tempTime</span><span class="p">,</span><span class="n">tempOrder</span><span class="o">=</span><span class="n">fastestroutebest</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">start</span><span class="p">,</span><span class="n">time</span><span class="o">+</span><span class="n">dataset</span><span class="p">[</span><span class="n">start</span><span class="p">][</span><span class="n">i</span><span class="p">],</span><span class="n">order</span><span class="o">+</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">ansTime</span><span class="o">&gt;</span><span class="n">tempTime</span><span class="p">:</span>
+                <span class="n">ansTime</span><span class="o">=</span><span class="n">tempTime</span>
+                <span class="n">ansOrder</span><span class="o">=</span><span class="n">tempOrder</span>
+    <span class="k">return</span> <span class="n">ansTime</span><span class="p">,</span><span class="n">ansOrder</span>
+
+<span class="c1"># Look for a solution, recoding time with time module</span>
+<span class="n">startTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">fast</span><span class="o">=</span><span class="n">fastestroutefast</span><span class="p">(</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">,[</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">])</span>
+<span class="n">endTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fast</span><span class="p">,</span><span class="n">endTime</span><span class="o">-</span><span class="n">startTime</span><span class="p">)</span><span class="c1"># huristic approach saves time</span>
+<span class="n">startTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">best</span><span class="o">=</span><span class="n">fastestroutebest</span><span class="p">(</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">,[</span><span class="s2">&quot;Del Norte&quot;</span><span class="p">])</span>
+<span class="n">endTime</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best</span><span class="p">,</span><span class="n">endTime</span><span class="o">-</span><span class="n">startTime</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(105, [&#39;Del Norte&#39;, &#39;Westview&#39;, &#39;Poway&#39;, &#39;RanchoBernado&#39;, &#39;MtCarmel&#39;, &#39;Del Norte&#39;]) 9.703636169433594e-05
+(85, [&#39;Del Norte&#39;, &#39;Westview&#39;, &#39;Poway&#39;, &#39;RanchoBernado&#39;, &#39;MtCarmel&#39;, &#39;Del Norte&#39;]) 0.0001728534698486328
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -338,15 +386,15 @@ Fully programmed solution will improve your grade, at a minimum show that you tr
 </thead>
 <tbody>
 <tr>
-<td>.15 pts for attempt</td>
+<td>.10 pts for attempt</td>
 <td>.65 for attempt</td>
 </tr>
 <tr>
-<td>.20 pts for complete</td>
+<td>.15 pts for complete</td>
 <td>.70 for complete</td>
 </tr>
 <tr>
-<td>.25 pts for above and beyond</td>
+<td>.20 pts for above and beyond</td>
 <td>.75 pts for above and beyond</td>
 </tr>
 </tbody>

@@ -124,7 +124,6 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Editing-Algorithms">Editing Algorithms </a></li>
 <li class="toc-entry toc-h3"><a href="#Developing-Algorithms">Developing Algorithms </a></li>
 <li class="toc-entry toc-h3"><a href="#Homework">Homework </a></li>
-<li class="toc-entry toc-h3"><a href="#Homework">Homework </a></li>
 </ul>
 </li>
 </ul><!--
@@ -434,24 +433,35 @@ Check number 13 passed
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Homework">
-<a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
-</h3>
-<p>Create an algorithm that will start with any positive integer n and display the full sequence of numbers that result from the Collatz Conjecture. The COllatz Conjecture is as follows:</p>
-<ol>
-<li>start with any positive integer</li>
-<li>if the number is even, divide by 2</li>
-<li>if the number is odd, multiply by 3 and add 1</li>
-<li>repeat steps 2 and 3 until you reach 1</li>
-</ol>
-<p>Example: if the starting number was 6, the output would be 6, 3, 10, 5, 16, 8, 4, 2, 1</p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">procedure</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">counter</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">num</span> <span class="o">!=</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">num</span><span class="o">%</span><span class="k">2</span>==0:
+            <span class="n">num</span><span class="o">//=</span><span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num</span><span class="o">*=</span><span class="mi">3</span>
+            <span class="n">num</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">counter</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"After "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">+</span> <span class="s2">" iterations"</span><span class="p">)</span>
+<span class="n">procedure</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
-</div>
-</div>
+    
+
 </div>
 
 

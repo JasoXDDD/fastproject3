@@ -14,7 +14,7 @@ gem "minima"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.15.1"
   gem 'jekyll-octicons'
   gem 'jekyll-remote-theme'
   gem "jekyll-twitter-plugin"
@@ -41,3 +41,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "faraday", "< 1.0"
 
+gem "github-pages", "~> 227", group: :jekyll_plugins

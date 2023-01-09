@@ -268,13 +268,8 @@ PLATFORMS
 
 DEPENDENCIES
   faraday (< 1.0)
-<<<<<<< HEAD
-  github-pages
-  jekyll-feed (~> 0.12)
-=======
   github-pages (~> 227)
   jekyll-feed (~> 0.15.1)
->>>>>>> a5bff53de4d5b6d5eddbd1af5c3097eb5534038c
   jekyll-gist
   jekyll-octicons
   jekyll-paginate

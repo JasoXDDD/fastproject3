@@ -41,8 +41,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "faraday", "< 1.0"
 
-<<<<<<< HEAD
-gem 'github-pages', group: :jekyll_plugins
-=======
 gem "github-pages", "~> 227", group: :jekyll_plugins
->>>>>>> a5bff53de4d5b6d5eddbd1af5c3097eb5534038c
